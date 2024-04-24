@@ -1,0 +1,33 @@
+<h1>
+  Receitas
+</h1>
+<div class="containerDificuldade">
+  <span (click)="alteraDificuldade(0)">
+    Dificuldade 
+  </span>
+  <button type="button" class="btnDific" style="background-color: #0E920C;" (click)="alteraDificuldade(1)">
+    Fácil
+  </button>
+  <button type="button" class="btnDific" style="background-color: #B3B70C;" (click)="alteraDificuldade(2)">
+    Médio
+  </button>
+  <button type="button" class="btnDific" style="background-color: #CF0606;" (click)="alteraDificuldade(3)">
+    Difícil
+  </button>
+</div>
+
+<div class="containerReceitas">
+
+  
+  <ng-container *ngFor="let receita of arrayDeReceitas">
+    <div class="itemReceita" *ngIf="dificuldadeSelecionada === 0 || receita.dificuldade === dificuldadeSelecionada"
+    routerLink="/detalhes/{{receita.id}}">
+      <img [src]="receita.imagem" alt="">
+      <h6>
+        {{ receita.titulo }}
+      </h6>
+    </div>
+  </ng-container>
+
+</div>
+  

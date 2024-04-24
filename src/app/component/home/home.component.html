@@ -1,0 +1,47 @@
+
+<section>
+ 
+  <div class="itemReceita">
+    
+    <div class="textos">
+      <h1>Receitas em Destaque</h1>
+    </div>
+    <div class="conteinerReceita">
+      <div class="receita" *ngFor="let receita of arrayDeReceitas">
+         <img [src]="receita.imagem" alt="">
+         <h6>{{receita.titulo}}</h6> 
+       </div> 
+      <!--<div class="receita">
+        <img src="../../../assets/paoqueijo.png" alt="">
+        <h6>Pão de queijo</h6>
+      </div>
+      <div class="receita">
+        <img src="../../../assets/picanha.png" alt="">
+        <h6>Picanha súina assada</h6>
+      </div>
+      <div class="receita">
+        <img src="../../../assets/macarrao.png" alt="">
+        <h6>Macarrão com ovo</h6>
+      </div> -->
+    </div>
+    <button class="botaoLaranja" routerLink="/interna">Ver mais receitas</button>
+    <div class="textos">
+      <h1>Receitas por Categoria</h1>
+  
+    <div class="conteinerCinza">
+    
+    <button class="botaoCinza" *ngFor= "let itens of arrayDeCategorias">{{itens.categoria}}</button>
+  </div>
+    <!-- <button class="botaoCinza">Carnes</button>
+    <button class="botaoCinza">Vegetarianos</button>
+    <button class="botaoCinza">Sopas</button>
+    <button class="botaoCinza">Massas</button>
+    <button class="botaoCinza">Sobremesa</button>
+    <button class="botaoCinza">Carnes</button>
+    <button class="botaoCinza">Vegetarianos</button>
+    <button class="botaoCinza">Sopas</button>
+    <button class="botaoCinza">Masssas</button> -->
+  </div>
+  </div>
+</section>
+ 
